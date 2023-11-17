@@ -37,10 +37,10 @@ while True:
     x_train,x_test,y_temp_train,y_temp_test = train_test_split(X,Y_temp,random_state=42)
     x_train,x_test,y_ghi_train,y_ghi_test = train_test_split(X,Y_ghi,random_state=42)
 
-    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.ensemble import LinearRegression
 
-    rfc1 = RandomForestRegressor()
-    rfc2 = RandomForestRegressor()
+    rfc1 = LinearRegression()
+    rfc2 = LinearRegression()
 
     rfc1.fit(x_train,y_temp_train)
     rfc2.fit(x_train,y_ghi_train)
